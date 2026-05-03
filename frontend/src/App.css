@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  color: #222;
+}
+
+.app {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  font-size: 48px;
+  margin-bottom: 5px;
+}
+
+.header p {
+  color: #666;
+}
+
+.form-card,
+.task-card {
+  background: white;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 24px;
+}
+
+.form-card h2,
+.tasks-title {
+  text-align: center;
+}
+
+.form-grid {
+  display: grid;
+  gap: 12px;
+}
+
+input,
+select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.add-btn {
+  background: #2563eb;
+  color: white;
+}
+
+.delete-btn {
+  background: #dc2626;
+  color: white;
+  margin-left: 10px;
+}
+
+.task-card h3 {
+  margin-top: 0;
+}
+
+.task-meta {
+  color: #555;
+  margin: 6px 0;
+}
+
+.task-actions {
+  margin-top: 15px;
+}
+
+.empty-state {
+  text-align: center;
+  color: #777;
+  background: white;
+  padding: 30px;
+  border-radius: 14px;
+}
