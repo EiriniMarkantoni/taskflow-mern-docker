@@ -68,7 +68,7 @@ http://localhost:5173
 ```bash
 docker compose up -d
 ```
-
+---
 ## Future Improvements
 - User authentication (login/register)
 - Task filtering
