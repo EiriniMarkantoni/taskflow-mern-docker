@@ -45,14 +45,14 @@ git clone https://github.com/YOUR-USERNAME/taskflow-mern-docker.git
 cd taskflow-mern-docker
 ```
 
-### 2. Backend
+### 2. Start Backend (Terminal 1)
 ```bash
 cd backend
 npm install
 npm run dev
 ```
 
-### 3. Frontend
+### 3. Start Frontend (Terminal 2)
 ```bash
 cd frontend
 npm install
