@@ -7,7 +7,7 @@ function App() {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [category, setCategory] = useState("");
-  const [deadline, setDeadline] = "";
+  const [deadline, setDeadline] = useState("");
 
   // 🔹 Fetch tasks
   const fetchTasks = async () => {
@@ -25,12 +25,17 @@ function App() {
 
   // 🔹 Add task
   const addTask = async () => {
+    if (!title || !description || !category || !deadline) {
+      alert("Please fill in all fields");
+      return;
+    }
+
     try {
       await axios.post("http://localhost:5000/api/tasks", {
         title,
         description,
         category,
-        deadline,
+        deadline: new Date(deadline),
       });
 
       setTitle("");
@@ -40,7 +45,8 @@ function App() {
 
       fetchTasks();
     } catch (err) {
-      console.error(err);
+      console.error(err.response?.data || err);
+      alert(err.response?.data?.message || "Error creating task");
     }
   };
 
